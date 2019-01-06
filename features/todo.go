@@ -17,8 +17,8 @@ type Todo struct {
 func Routes() *chi.Mux {
 	router := chi.NewRouter()
 	router.Get("/{todoID}", GetATodo)
-	// router.Delete("/{todoID}", DeleteTodo)
-	// router.Post("/", CreateTodo)
+	router.Delete("/{todoID}", DeleteTodo)
+	router.Post("/", CreateTodo)
 	router.Get("/", GetAllTodos)
 	return router
 }
