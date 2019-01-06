@@ -28,7 +28,7 @@ func GetATodo(w http.ResponseWriter, r *http.Request) {
 	todos := Todo{
 		Slug:  todoID,
 		Title: "Hello world",
-		Body:  "Hello world from planet earth",
+		Body:  "Hello world from planet earth!",
 		Genre: "Fiction",
 	}
 	render.JSON(w, r, todos) // A chi router helper for serializing and returning json
@@ -51,13 +51,13 @@ func GetAllTodos(w http.ResponseWriter, r *http.Request) {
 		{
 			Slug:  "slug",
 			Title: "Hello world",
-			Body:  "Hello world from planet earth",
+			Body:  "Hello world from planet earth!",
 			Genre: "Fiction",
 		},
 		{
 			Slug:  "slug2",
 			Title: "Hello worlds",
-			Body:  "Hello worlds from planet earth",
+			Body:  "Hello worlds from planet earth?",
 			Genre: "Non-Fiction",
 		},
 	}
